@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Thanushree S\\Documents\\GIT\\Timesheet_project\\Timesheet\\Timesheet.csproj": {}
+    "C:\\Users\\Sandhya V\\Documents\\GithubSandhya\\dotNet-Projects\\Timesheet\\Timesheet_project\\Timesheet\\Timesheet.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Thanushree S\\Documents\\GIT\\Timesheet_project\\Timesheet\\Timesheet.csproj": {
+    "C:\\Users\\Sandhya V\\Documents\\GithubSandhya\\dotNet-Projects\\Timesheet\\Timesheet_project\\Timesheet\\Timesheet.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Thanushree S\\Documents\\GIT\\Timesheet_project\\Timesheet\\Timesheet.csproj",
+        "projectUniqueName": "C:\\Users\\Sandhya V\\Documents\\GithubSandhya\\dotNet-Projects\\Timesheet\\Timesheet_project\\Timesheet\\Timesheet.csproj",
         "projectName": "Timesheet",
-        "projectPath": "C:\\Users\\Thanushree S\\Documents\\GIT\\Timesheet_project\\Timesheet\\Timesheet.csproj",
-        "packagesPath": "C:\\Users\\Thanushree S\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Thanushree S\\Documents\\GIT\\Timesheet_project\\Timesheet\\obj\\",
+        "projectPath": "C:\\Users\\Sandhya V\\Documents\\GithubSandhya\\dotNet-Projects\\Timesheet\\Timesheet_project\\Timesheet\\Timesheet.csproj",
+        "packagesPath": "C:\\Users\\Sandhya V\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Sandhya V\\Documents\\GithubSandhya\\dotNet-Projects\\Timesheet\\Timesheet_project\\Timesheet\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Thanushree S\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Sandhya V\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
