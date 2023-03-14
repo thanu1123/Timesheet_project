@@ -11,10 +11,10 @@ namespace TimesheetPoject.Controllers
     [ApiController]
     public class RegestrationController : ControllerBase
     {
-        private readonly TimesheetInterface _timesheetInterface;
+        private readonly ITimesheetInterface _timesheetInterface;
         private readonly Timesheet_Context _timesheet_Context;
 
-        public RegestrationController(TimesheetInterface timesheetInterface, Timesheet_Context timesheet_Context) 
+        public RegestrationController(ITimesheetInterface timesheetInterface, Timesheet_Context timesheet_Context) 
         {
             _timesheetInterface = timesheetInterface;
             _timesheet_Context=timesheet_Context;

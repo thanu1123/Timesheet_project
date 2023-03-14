@@ -11,7 +11,7 @@ using TimesheetPoject.Model;
 
 namespace TimesheetPoject.Repository
 {
-    public class TimesheetRepository : ControllerBase,TimesheetInterface
+    public class TimesheetRepository : ControllerBase, ITimesheetInterface
     {
         private readonly Timesheet_Context _timesheet_Context;
         private readonly IConfiguration _configuration;

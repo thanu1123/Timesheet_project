@@ -46,7 +46,8 @@ builder.Services.AddAuthentication().AddJwtBearer(options =>
         throw new Exception(e.Message);
     }
 });
-builder.Services.AddTransient<TimesheetInterface, TimesheetRepository>();
+builder.Services.AddTransient<ITimesheetInterface, TimesheetRepository>();
+builder.Services.AddTransient<IUploadInterface, UploadRepo>();
 
 
 
