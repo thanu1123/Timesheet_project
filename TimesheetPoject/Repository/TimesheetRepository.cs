@@ -23,7 +23,7 @@ namespace TimesheetPoject.Repository
         }
         public IActionResult Regester(RegestrationModel regestrationModel)
         {
-            _timesheet_Context.Employee_Timesheet.Add(regestrationModel);
+            _timesheet_Context.Register.Add(regestrationModel);
             _timesheet_Context.SaveChanges();
             return Ok("Regestered Successfully");
         } 
@@ -44,14 +44,14 @@ namespace TimesheetPoject.Repository
         }
         public IActionResult ResetPassword(LoginModel loginModel)
         {
-            var name = _timesheet_Context.Employee_Timesheet.FirstOrDefault(i => i.Username== loginModel.Username);
+            var name = _timesheet_Context.Register.FirstOrDefault(i => i.Username== loginModel.Username);
             name.Username = loginModel.Username;
             name.Password= loginModel.Password;
             name.Email=  loginModel.Email;
-            name.Conformpassword = loginModel.Conformpassword;
+            name.Confirmpassword = loginModel.Confirmpassword;
             string passwordHash = BCrypt.Net.BCrypt.HashPassword(loginModel.Password);
             name.HashKeyPassword = passwordHash;
-            _timesheet_Context.Employee_Timesheet.Update(name);
+            _timesheet_Context.Register.Update(name);
             _timesheet_Context.SaveChanges();
             return Ok("Password Reset Successfully");
         }

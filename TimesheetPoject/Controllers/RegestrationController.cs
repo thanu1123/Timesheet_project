@@ -35,7 +35,7 @@ namespace TimesheetPoject.Controllers
             {
                 return BadRequest("Password should contain first letter should capital letter and one special symbol");
             }
-            if (regestrationModel.Password!=regestrationModel.Conformpassword)
+            if (regestrationModel.Password!=regestrationModel.Confirmpassword)
             {
                 return BadRequest("Conform Password should match with Password");
             }
@@ -45,13 +45,13 @@ namespace TimesheetPoject.Controllers
         [HttpPost("Login")]
         public IActionResult Login(LoginModel loginModel)
         {
-            var name = _timesheet_Context.Employee_Timesheet.FirstOrDefault(i => i.Username== loginModel.Username);
+            var name = _timesheet_Context.Register.FirstOrDefault(i => i.Username== loginModel.Username);
             if (name== null)
             {
                 return BadRequest("Username Not Existed..!!");
             }
             string passwordHash = BCrypt.Net.BCrypt.HashPassword(loginModel.Password);
-            var password = _timesheet_Context.Employee_Timesheet.FirstOrDefault(i => i.HashKeyPassword== passwordHash);
+            var password = _timesheet_Context.Register.FirstOrDefault(i => i.HashKeyPassword== passwordHash);
             if (password!= null)
             {
                 return BadRequest("Wrong Password");
@@ -61,7 +61,7 @@ namespace TimesheetPoject.Controllers
         [HttpPut("Reset Password")]
         public IActionResult ResetPassword(LoginModel loginModel)
         {
-            var name = _timesheet_Context.Employee_Timesheet.FirstOrDefault(i => i.Username== loginModel.Username);
+            var name = _timesheet_Context.Register.FirstOrDefault(i => i.Username== loginModel.Username);
             if (name== null)
             {
                 return BadRequest("Username Not Existed..!!");
@@ -71,7 +71,7 @@ namespace TimesheetPoject.Controllers
             {
                 return BadRequest("Password should contain first letter should capital letter and one special symbol");
             }
-            if (loginModel.Password!=loginModel.Conformpassword)
+            if (loginModel.Password!=loginModel.Confirmpassword)
             {
                 return BadRequest("Conform Password should match with Password");
             }
