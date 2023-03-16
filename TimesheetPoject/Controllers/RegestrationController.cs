@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System.Text.RegularExpressions;
 using TimesheetPoject.Context_Timesheet;
@@ -7,6 +8,7 @@ using TimesheetPoject.Model;
 
 namespace TimesheetPoject.Controllers
 {
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class RegestrationController : ControllerBase

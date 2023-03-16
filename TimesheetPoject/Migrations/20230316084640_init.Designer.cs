@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using TimesheetPoject.Context_Timesheet;
 
@@ -11,9 +12,11 @@ using TimesheetPoject.Context_Timesheet;
 namespace TimesheetPoject.Migrations
 {
     [DbContext(typeof(Timesheet_Context))]
-    partial class Timesheet_ContextModelSnapshot : ModelSnapshot
+    [Migration("20230316084640_init")]
+    partial class init
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
