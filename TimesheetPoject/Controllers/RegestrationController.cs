@@ -7,8 +7,7 @@ using TimesheetPoject.Interface;
 using TimesheetPoject.Model;
 
 namespace TimesheetPoject.Controllers
-{
-    [Authorize]
+{   
     [Route("api/[controller]")]
     [ApiController]
     public class RegestrationController : ControllerBase

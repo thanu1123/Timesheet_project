@@ -12,8 +12,8 @@ using TimesheetPoject.Context_Timesheet;
 namespace TimesheetPoject.Migrations
 {
     [DbContext(typeof(Timesheet_Context))]
-    [Migration("20230316084640_init")]
-    partial class init
+    [Migration("20230316114120_abc")]
+    partial class abc
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
