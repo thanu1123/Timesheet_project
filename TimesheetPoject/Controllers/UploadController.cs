@@ -29,5 +29,15 @@ namespace TimesheetPoject.Controllers
         {
             return Ok(_Iupload.add1(entries));
         }
+        [HttpGet("Emp Details")]
+        public List<EmployeeModel> select(int userId)
+        {
+            return _Iupload.GetEmpDet(userId).ToList();
+        }
+        [HttpGet("TimeSheet Details")]
+        public List<UploadModel> select1(int userId)
+        {
+            return _Iupload.GetTSDet(userId).ToList();
+        }
     }
 }

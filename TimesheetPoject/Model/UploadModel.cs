@@ -5,9 +5,8 @@ namespace TimesheetPoject.Model
 {
     public class UploadModel
     {
-        internal readonly string Employee_Name;
+        public string Employee_Name;
 
-        [Key]
         public int Id { get; set; }
 
         public string Day { get; set; }
@@ -15,10 +14,6 @@ namespace TimesheetPoject.Model
         public string Status { get; set; }
 
         public int total_hours { get; set; }
-
-        [ForeignKey("user_id")]
-        public int user_id { get; set; }
-
 
         public DateTime Date { get; set; }
 

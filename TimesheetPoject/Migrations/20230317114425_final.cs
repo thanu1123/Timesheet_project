@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace TimesheetPoject.Migrations
 {
     /// <inheritdoc />
-    public partial class abc : Migration
+    public partial class final : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -17,10 +17,11 @@ namespace TimesheetPoject.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
+                    UserId = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Employee_Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Employee_Email = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Joining_date = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    Phone_Number = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                    Phone_Number = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -33,8 +34,7 @@ namespace TimesheetPoject.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Username = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Email = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    UserId = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Password = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Confirmpassword = table.Column<string>(type: "nvarchar(max)", nullable: false)
                 },
@@ -49,8 +49,11 @@ namespace TimesheetPoject.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
+                    UserId = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Username = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Email = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    PhoneNumber = table.Column<int>(type: "int", nullable: false),
+                    DateOfJoin = table.Column<DateTime>(type: "datetime2", nullable: false),
                     Password = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     HashKeyPassword = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Confirmpassword = table.Column<string>(type: "nvarchar(max)", nullable: false)
@@ -69,7 +72,6 @@ namespace TimesheetPoject.Migrations
                     Day = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Status = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     total_hours = table.Column<int>(type: "int", nullable: false),
-                    user_id = table.Column<int>(type: "int", nullable: false),
                     Date = table.Column<DateTime>(type: "datetime2", nullable: false),
                     month = table.Column<string>(type: "nvarchar(max)", nullable: false)
                 },

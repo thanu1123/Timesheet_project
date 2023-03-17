@@ -12,8 +12,8 @@ using TimesheetPoject.Context_Timesheet;
 namespace TimesheetPoject.Migrations
 {
     [DbContext(typeof(Timesheet_Context))]
-    [Migration("20230316114120_abc")]
-    partial class abc
+    [Migration("20230317114425_final")]
+    partial class final
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -44,7 +44,10 @@ namespace TimesheetPoject.Migrations
                     b.Property<DateTime>("Joining_date")
                         .HasColumnType("datetime2");
 
-                    b.Property<string>("Phone_Number")
+                    b.Property<int>("Phone_Number")
+                        .HasColumnType("int");
+
+                    b.Property<string>("UserId")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -65,15 +68,11 @@ namespace TimesheetPoject.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Email")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("Password")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Username")
+                    b.Property<string>("UserId")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -82,7 +81,7 @@ namespace TimesheetPoject.Migrations
                     b.ToTable("Login");
                 });
 
-            modelBuilder.Entity("TimesheetPoject.Model.RegestrationModel", b =>
+            modelBuilder.Entity("TimesheetPoject.Model.RegistrationModel", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -94,6 +93,9 @@ namespace TimesheetPoject.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<DateTime>("DateOfJoin")
+                        .HasColumnType("datetime2");
+
                     b.Property<string>("Email")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -103,6 +105,13 @@ namespace TimesheetPoject.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Password")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("PhoneNumber")
+                        .HasColumnType("int");
+
+                    b.Property<string>("UserId")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -139,9 +148,6 @@ namespace TimesheetPoject.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("total_hours")
-                        .HasColumnType("int");
-
-                    b.Property<int>("user_id")
                         .HasColumnType("int");
 
                     b.HasKey("Id");

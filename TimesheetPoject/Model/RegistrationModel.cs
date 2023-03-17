@@ -2,22 +2,23 @@
 
 namespace TimesheetPoject.Model
 {
-    public class RegestrationModel
+    public class RegistrationModel
     {
         public int Id { get; set; }
 
-        //[Required(ErrorMessage = "Username is required ")]
+      public string UserId { get; set; }
         public string Username { get; set; }
 
         [EmailAddress]
         public string Email { get; set; }
 
-        //[Required(ErrorMessage = "Password is required ")]
+        public int PhoneNumber { get; set; }
+        public DateTime DateOfJoin { get; set; }
         public string Password { get; set; }
 
         public string HashKeyPassword { get; set; }
 
-        //[Required(ErrorMessage = "ConformPassword is required ")]
+        
         public string Confirmpassword { get; set; }
 
 

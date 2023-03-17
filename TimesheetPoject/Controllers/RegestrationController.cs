@@ -20,16 +20,17 @@ namespace TimesheetPoject.Controllers
             _timesheetInterface = timesheetInterface;
             _timesheet_Context = timesheet_Context;
         }
-        [HttpPost("Regestration")]
-        public IActionResult Regestration(RegestrationModel regestrationModel)
+        [HttpPost("Registration")]
+        public IActionResult Regestration(RegistrationModel regestrationModel)
         {
             string passwordHash = BCrypt.Net.BCrypt.HashPassword(regestrationModel.Password);
             regestrationModel.HashKeyPassword = passwordHash;
 
-            string pattern = "^[^0-9]*$";
-            if (regestrationModel.Username == "" || !Regex.IsMatch(regestrationModel.Username, pattern))
+            string UID = "^JOY\\d{4}$";
+            string phno = "^\\d{10}$";
+            if (regestrationModel.UserId == "" || !Regex.IsMatch(regestrationModel.UserId, UID))
             {
-                return BadRequest("User name cannot be empty  and  user name cannot contain number");
+                return BadRequest("User ID cannot be empty  and UserID must start with JOY followed by your 4 numbers");
             }
             string Passwordpattern1 = "^(?=.*[A-Za-z])(?=.*\\d)(?=.*[@$!%*?&])[A-Za-z\\d@$!%*?&]{8,}$";
             if (regestrationModel.Password == "" || !Regex.IsMatch(regestrationModel.Password, Passwordpattern1))
@@ -38,7 +39,7 @@ namespace TimesheetPoject.Controllers
             }
             if (regestrationModel.Password != regestrationModel.Confirmpassword)
             {
-                return BadRequest("Conform Password should match with Password");
+                return BadRequest("Confirm Password should match with Password");
             }
 
             return Ok(_timesheetInterface.Regester(regestrationModel));
@@ -46,10 +47,10 @@ namespace TimesheetPoject.Controllers
         [HttpPost("Login")]
         public IActionResult Login(LoginModel loginModel)
         {
-            var name = _timesheet_Context.Register.FirstOrDefault(i => i.Username == loginModel.Username);
-            if (name == null)
+            var user = _timesheet_Context.Register.FirstOrDefault(i => i.UserId == loginModel.UserId);
+            if (user == null)
             {
-                return BadRequest("Username Not Existed..!!");
+                return BadRequest("UserId Not Exist..!!");
             }
             string passwordHash = BCrypt.Net.BCrypt.HashPassword(loginModel.Password);
             var password = _timesheet_Context.Register.FirstOrDefault(i => i.HashKeyPassword == passwordHash);
@@ -62,7 +63,7 @@ namespace TimesheetPoject.Controllers
         [HttpPut("Reset Password")]
         public IActionResult ResetPassword(LoginModel loginModel)
         {
-            var name = _timesheet_Context.Register.FirstOrDefault(i => i.Username == loginModel.Username);
+            var name = _timesheet_Context.Register.FirstOrDefault(i => i.UserId == loginModel.UserId);
             if (name == null)
             {
                 return BadRequest("Username Not Existed..!!");
@@ -74,7 +75,7 @@ namespace TimesheetPoject.Controllers
             }
             if (loginModel.Password != loginModel.Confirmpassword)
             {
-                return BadRequest("Conform Password should match with Password");
+                return BadRequest("Confirm Password should match with Password");
             }
             return Ok(_timesheetInterface.ResetPassword(loginModel));
         }
