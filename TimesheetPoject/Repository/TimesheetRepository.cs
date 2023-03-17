@@ -16,7 +16,7 @@ namespace TimesheetPoject.Repository
         private readonly Timesheet_Context _timesheet_Context;
         private readonly IConfiguration _configuration;
 
-        public TimesheetRepository(Timesheet_Context timesheet_Context,IConfiguration configuration) 
+        public TimesheetRepository(Timesheet_Context timesheet_Context, IConfiguration configuration)
         {
             _timesheet_Context = timesheet_Context;
             _configuration = configuration;
@@ -26,11 +26,11 @@ namespace TimesheetPoject.Repository
             _timesheet_Context.Register.Add(regestrationModel);
             _timesheet_Context.SaveChanges();
             return Ok("Regestered Successfully");
-        } 
+        }
 
         public IActionResult Login(LoginModel loginModel)
         {
-            
+
             List<Claim> claims = new List<Claim>
             {
                     new Claim(ClaimTypes.Name, loginModel.Username)
@@ -44,10 +44,10 @@ namespace TimesheetPoject.Repository
         }
         public IActionResult ResetPassword(LoginModel loginModel)
         {
-            var name = _timesheet_Context.Register.FirstOrDefault(i => i.Username== loginModel.Username);
+            var name = _timesheet_Context.Register.FirstOrDefault(i => i.Username == loginModel.Username);
             name.Username = loginModel.Username;
-            name.Password= loginModel.Password;
-            name.Email=  loginModel.Email;
+            name.Password = loginModel.Password;
+            name.Email = loginModel.Email;
             name.Confirmpassword = loginModel.Confirmpassword;
             string passwordHash = BCrypt.Net.BCrypt.HashPassword(loginModel.Password);
             name.HashKeyPassword = passwordHash;

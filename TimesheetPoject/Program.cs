@@ -20,13 +20,13 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(options =>
 {
-    options.AddSecurityDefinition("oauth2", new OpenApiSecurityScheme
-                                          {
-                                              In = ParameterLocation.Header,
-                                              Name = "Authorization",
-                                              Type = SecuritySchemeType.ApiKey
-                                          });
-options.OperationFilter<SecurityRequirementsOperationFilter>();
+    options.AddSecurityDefinition("oauth2", new OpenApiSecurityScheme
+    {
+        In = ParameterLocation.Header,
+        Name = "Authorization",
+        Type = SecuritySchemeType.ApiKey
+    });
+    options.OperationFilter<SecurityRequirementsOperationFilter>();
 });
 builder.Services.AddAuthentication().AddJwtBearer(options =>
 {
@@ -67,3 +67,5 @@ app.UseAuthorization();
 app.MapControllers();
 
 app.Run();
+
+

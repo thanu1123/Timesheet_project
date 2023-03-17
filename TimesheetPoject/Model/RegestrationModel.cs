@@ -15,7 +15,7 @@ namespace TimesheetPoject.Model
         //[Required(ErrorMessage = "Password is required ")]
         public string Password { get; set; }
 
-        public string HashKeyPassword { get; set; } 
+        public string HashKeyPassword { get; set; }
 
         //[Required(ErrorMessage = "ConformPassword is required ")]
         public string Confirmpassword { get; set; }

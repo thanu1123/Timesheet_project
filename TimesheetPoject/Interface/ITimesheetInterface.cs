@@ -9,6 +9,6 @@ namespace TimesheetPoject.Interface
         public IActionResult Login(LoginModel loginModel);
         public IActionResult ResetPassword(LoginModel loginModel);
 
-       
+
     }
 }
