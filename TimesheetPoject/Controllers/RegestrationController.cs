@@ -31,6 +31,10 @@ namespace TimesheetPoject.Controllers
             {
                 return BadRequest("User name cannot be empty  and  user name cannot contain number");
             }
+            else
+            {
+                throw new Exception("asdfghjkl");
+            }
             string Passwordpattern1 = "^(?=.*[A-Za-z])(?=.*\\d)(?=.*[@$!%*?&])[A-Za-z\\d@$!%*?&]{8,}$";
             if (regestrationModel.Password == ""|| !Regex.IsMatch(regestrationModel.Password, Passwordpattern1))
             {
