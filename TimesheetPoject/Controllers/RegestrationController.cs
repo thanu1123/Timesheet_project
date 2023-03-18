@@ -1,10 +1,15 @@
-﻿using Microsoft.AspNetCore.Authorization;
+﻿using Azure;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Win32;
+using System.Data.Entity;
 using System.Text.RegularExpressions;
 using TimesheetPoject.Context_Timesheet;
 using TimesheetPoject.Interface;
 using TimesheetPoject.Model;
+using Microsoft.EntityFrameworkCore;
 
 namespace TimesheetPoject.Controllers
 {
@@ -14,7 +19,6 @@ namespace TimesheetPoject.Controllers
     {
         private readonly ITimesheetInterface _timesheetInterface;
         private readonly Timesheet_Context _timesheet_Context;
-
         public RegestrationController(ITimesheetInterface timesheetInterface, Timesheet_Context timesheet_Context)
         {
             _timesheetInterface = timesheetInterface;
@@ -32,6 +36,15 @@ namespace TimesheetPoject.Controllers
             {
                 return BadRequest("User ID cannot be empty  and UserID must start with JOY followed by your 4 numbers");
             }
+            var existingUser = _timesheet_Context.Register.FirstOrDefault(u => u.UserId == regestrationModel.UserId);
+            if (existingUser != null)
+            {
+                return BadRequest("A user with the same UserId already exists");
+            }
+            if(!Regex.IsMatch(regestrationModel.PhoneNumber.ToString(), phno))
+            {
+                return BadRequest("Invalid phone number");
+            }
             string Passwordpattern1 = "^(?=.*[A-Za-z])(?=.*\\d)(?=.*[@$!%*?&])[A-Za-z\\d@$!%*?&]{8,}$";
             if (regestrationModel.Password == "" || !Regex.IsMatch(regestrationModel.Password, Passwordpattern1))
             {
@@ -41,7 +54,6 @@ namespace TimesheetPoject.Controllers
             {
                 return BadRequest("Confirm Password should match with Password");
             }
-
             return Ok(_timesheetInterface.Regester(regestrationModel));
         }
         [HttpPost("Login")]
