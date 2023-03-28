@@ -5,9 +5,10 @@ namespace TimesheetPoject.Model
 {
     public class UploadModel
     {
-        public string Employee_Name;
+       
 
         public int Id { get; set; }
+        public string Employee_Name;
 
         public string Day { get; set; }
 
@@ -17,6 +18,6 @@ namespace TimesheetPoject.Model
 
         public DateTime Date { get; set; }
 
-        public string month { get; set; }
+        //public string month { get; set; }
     }
 }

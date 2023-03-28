@@ -140,10 +140,6 @@ namespace TimesheetPoject.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("month")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<int>("total_hours")
                         .HasColumnType("int");
 
