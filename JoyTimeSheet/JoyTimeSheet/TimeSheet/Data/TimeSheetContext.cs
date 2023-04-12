@@ -18,5 +18,7 @@ namespace TimeSheet.Data
         public DbSet<Roles> roles { get; set; }
         public DbSet<TimeSheets> timeSheets { get; set; }
         public DbSet<TimeSheetSummary> timeSheetSummarys { get; set; }
+
+        public DbSet<ViewPreviousChanges> viewPreviousChanges { get; set; }
     }
 }

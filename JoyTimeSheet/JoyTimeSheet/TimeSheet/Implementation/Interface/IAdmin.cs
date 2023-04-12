@@ -25,5 +25,9 @@ namespace TimeSheet.Implementation.Interface
         IEnumerable<GetAllEmployeeTypeByEmployeeModel> GetAllEmployeeTypesByEmployee();
         IQueryable<EmployeeType> GetAllEmplyoeeTypes();
 
+       
+        
+        
+
     }
 }
