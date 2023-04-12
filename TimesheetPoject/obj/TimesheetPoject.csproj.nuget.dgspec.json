@@ -81,6 +81,14 @@
               "target": "Package",
               "version": "[6.27.0, )"
             },
+            "MvcContrib": {
+              "target": "Package",
+              "version": "[2.0.95, )"
+            },
+            "NSwag.Annotations": {
+              "target": "Package",
+              "version": "[13.18.2, )"
+            },
             "Npgsql": {
               "target": "Package",
               "version": "[7.0.2, )"

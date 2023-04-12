@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "frulTcVUacwUjWHdA7+nw57HQX9/17jdZUIebLmGDhF6VXtbdT5++qaImjxCwwiA3bGFjIFlXyWzHnliyQjXnw==",
+  "dgSpecHash": "0OQeaWHREnjda5vl/jVwzGKSZQQvuzTiU2xMywEivtgATOxtMMVkLkCE3y95iDmHe3IyobqPnlb0MNIcjXrWuA==",
   "success": true,
   "projectFilePath": "C:\\Users\\Thanushree S\\Documents\\GIT\\Timesheet_project\\TimesheetPoject\\TimesheetPoject.csproj",
   "expectedPackageFiles": [
@@ -46,9 +46,13 @@
     "C:\\Users\\Thanushree S\\.nuget\\packages\\microsoft.sqlserver.server\\1.0.0\\microsoft.sqlserver.server.1.0.0.nupkg.sha512",
     "C:\\Users\\Thanushree S\\.nuget\\packages\\microsoft.win32.registry\\5.0.0\\microsoft.win32.registry.5.0.0.nupkg.sha512",
     "C:\\Users\\Thanushree S\\.nuget\\packages\\microsoft.win32.systemevents\\5.0.0\\microsoft.win32.systemevents.5.0.0.nupkg.sha512",
+    "C:\\Users\\Thanushree S\\.nuget\\packages\\microsoftwebmvc\\2.0.0\\microsoftwebmvc.2.0.0.nupkg.sha512",
     "C:\\Users\\Thanushree S\\.nuget\\packages\\mono.texttemplating\\2.2.1\\mono.texttemplating.2.2.1.nupkg.sha512",
+    "C:\\Users\\Thanushree S\\.nuget\\packages\\mvc2futures\\2.0.50217\\mvc2futures.2.0.50217.nupkg.sha512",
+    "C:\\Users\\Thanushree S\\.nuget\\packages\\mvccontrib\\2.0.95\\mvccontrib.2.0.95.nupkg.sha512",
     "C:\\Users\\Thanushree S\\.nuget\\packages\\npgsql\\7.0.2\\npgsql.7.0.2.nupkg.sha512",
     "C:\\Users\\Thanushree S\\.nuget\\packages\\npgsql.entityframeworkcore.postgresql\\7.0.3\\npgsql.entityframeworkcore.postgresql.7.0.3.nupkg.sha512",
+    "C:\\Users\\Thanushree S\\.nuget\\packages\\nswag.annotations\\13.18.2\\nswag.annotations.13.18.2.nupkg.sha512",
     "C:\\Users\\Thanushree S\\.nuget\\packages\\scrutor\\3.3.0\\scrutor.3.3.0.nupkg.sha512",
     "C:\\Users\\Thanushree S\\.nuget\\packages\\swashbuckle.aspnetcore\\6.5.0\\swashbuckle.aspnetcore.6.5.0.nupkg.sha512",
     "C:\\Users\\Thanushree S\\.nuget\\packages\\swashbuckle.aspnetcore.filters\\7.0.6\\swashbuckle.aspnetcore.filters.7.0.6.nupkg.sha512",
@@ -86,5 +90,26 @@
     "C:\\Users\\Thanushree S\\.nuget\\packages\\system.threading.tasks.extensions\\4.5.4\\system.threading.tasks.extensions.4.5.4.nupkg.sha512",
     "C:\\Users\\Thanushree S\\.nuget\\packages\\system.windows.extensions\\5.0.0\\system.windows.extensions.5.0.0.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Mvc2Futures 2.0.50217' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net7.0'. This package may not be fully compatible with your project.",
+      "libraryId": "Mvc2Futures",
+      "targetGraphs": [
+        "net7.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'MvcContrib 2.0.95' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net7.0'. This package may not be fully compatible with your project.",
+      "libraryId": "MvcContrib",
+      "targetGraphs": [
+        "net7.0"
+      ]
+    }
+  ]
 }

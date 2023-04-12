@@ -729,6 +729,12 @@
           }
         }
       },
+      "MicrosoftWebMvc/2.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Mvc2Futures": "2.0.50217"
+        }
+      },
       "Mono.TextTemplating/2.2.1": {
         "type": "package",
         "dependencies": {
@@ -739,6 +745,27 @@
         },
         "runtime": {
           "lib/netstandard2.0/Mono.TextTemplating.dll": {}
+        }
+      },
+      "Mvc2Futures/2.0.50217": {
+        "type": "package",
+        "compile": {
+          "lib/Microsoft.Web.Mvc.dll": {}
+        },
+        "runtime": {
+          "lib/Microsoft.Web.Mvc.dll": {}
+        }
+      },
+      "MvcContrib/2.0.95": {
+        "type": "package",
+        "dependencies": {
+          "MicrosoftWebMvc": "2.0.0"
+        },
+        "compile": {
+          "lib/MvcContrib.dll": {}
+        },
+        "runtime": {
+          "lib/MvcContrib.dll": {}
         }
       },
       "Npgsql/7.0.2": {
@@ -772,6 +799,19 @@
         },
         "runtime": {
           "lib/net7.0/Npgsql.EntityFrameworkCore.PostgreSQL.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "NSwag.Annotations/13.18.2": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/NSwag.Annotations.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/NSwag.Annotations.dll": {
             "related": ".xml"
           }
         }
@@ -2617,6 +2657,17 @@
         "version.txt"
       ]
     },
+    "MicrosoftWebMvc/2.0.0": {
+      "sha512": "WHtS0VfGs4f+YYUdd3fJVCrOPyR4xY8a4aGG4vfAXdRqyZ8pzatbwzbH4l+bdo7W5O50j/lO0Vt3relZJQQ8bw==",
+      "type": "package",
+      "path": "microsoftwebmvc/2.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "microsoftwebmvc.2.0.0.nupkg.sha512",
+        "microsoftwebmvc.nuspec"
+      ]
+    },
     "Mono.TextTemplating/2.2.1": {
       "sha512": "KZYeKBET/2Z0gY1WlTAK7+RHTl7GSbtvTLDXEZZojUdAPqpQNDL6tHv7VUpqfX5VEOh+uRGKaZXkuD253nEOBQ==",
       "type": "package",
@@ -2628,6 +2679,31 @@
         "lib/netstandard2.0/Mono.TextTemplating.dll",
         "mono.texttemplating.2.2.1.nupkg.sha512",
         "mono.texttemplating.nuspec"
+      ]
+    },
+    "Mvc2Futures/2.0.50217": {
+      "sha512": "90ilYxgj4s82mfgVegs6NujfBw5zbR49SlIWW/vtjRXu6Trdi9W1xh/LlHu6or47IeBI2AhGKsqnfm7HFCBBlA==",
+      "type": "package",
+      "path": "mvc2futures/2.0.50217",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/Microsoft.Web.Mvc.dll",
+        "mvc2futures.2.0.50217.nupkg.sha512",
+        "mvc2futures.nuspec"
+      ]
+    },
+    "MvcContrib/2.0.95": {
+      "sha512": "+vqMMmiGbn+rdFBGEo691A3aZr7OHUp3doXghpizilqbIYhZk49bnEI8hoZV4Apm/9tVx9epj1EbgCAK99W3+Q==",
+      "type": "package",
+      "path": "mvccontrib/2.0.95",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/MvcContrib.XML",
+        "lib/MvcContrib.dll",
+        "mvccontrib.2.0.95.nupkg.sha512",
+        "mvccontrib.nuspec"
       ]
     },
     "Npgsql/7.0.2": {
@@ -2670,6 +2746,24 @@
         "npgsql.entityframeworkcore.postgresql.7.0.3.nupkg.sha512",
         "npgsql.entityframeworkcore.postgresql.nuspec",
         "postgresql.png"
+      ]
+    },
+    "NSwag.Annotations/13.18.2": {
+      "sha512": "2zDLZXEU1PVuvdMc1k+SIkLonp8vPRHAkto6qQfCeCPqhDaF82+FOWe3TLJIYBS8IC7aV/mT+eoqJLeZvXiN4A==",
+      "type": "package",
+      "path": "nswag.annotations/13.18.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "NuGetIcon.png",
+        "lib/net45/NSwag.Annotations.dll",
+        "lib/net45/NSwag.Annotations.xml",
+        "lib/netstandard1.0/NSwag.Annotations.dll",
+        "lib/netstandard1.0/NSwag.Annotations.xml",
+        "lib/netstandard2.0/NSwag.Annotations.dll",
+        "lib/netstandard2.0/NSwag.Annotations.xml",
+        "nswag.annotations.13.18.2.nupkg.sha512",
+        "nswag.annotations.nuspec"
       ]
     },
     "Scrutor/3.3.0": {
@@ -4168,6 +4262,8 @@
       "Microsoft.EntityFrameworkCore.SqlServer >= 7.0.4",
       "Microsoft.EntityFrameworkCore.Tools >= 7.0.4",
       "Microsoft.IdentityModel.Tokens >= 6.27.0",
+      "MvcContrib >= 2.0.95",
+      "NSwag.Annotations >= 13.18.2",
       "Npgsql >= 7.0.2",
       "Npgsql.EntityFrameworkCore.PostgreSQL >= 7.0.3",
       "Swashbuckle.AspNetCore >= 6.5.0",
@@ -4256,6 +4352,14 @@
             "target": "Package",
             "version": "[6.27.0, )"
           },
+          "MvcContrib": {
+            "target": "Package",
+            "version": "[2.0.95, )"
+          },
+          "NSwag.Annotations": {
+            "target": "Package",
+            "version": "[13.18.2, )"
+          },
           "Npgsql": {
             "target": "Package",
             "version": "[7.0.2, )"
@@ -4299,5 +4403,27 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Mvc2Futures 2.0.50217' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net7.0'. This package may not be fully compatible with your project.",
+      "libraryId": "Mvc2Futures",
+      "targetGraphs": [
+        "net7.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'MvcContrib 2.0.95' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net7.0'. This package may not be fully compatible with your project.",
+      "libraryId": "MvcContrib",
+      "targetGraphs": [
+        "net7.0"
+      ]
+    }
+  ]
 }

@@ -16,6 +16,8 @@
           "Microsoft.EntityFrameworkCore.SqlServer": "7.0.4",
           "Microsoft.EntityFrameworkCore.Tools": "7.0.4",
           "Microsoft.IdentityModel.Tokens": "6.27.0",
+          "MvcContrib": "2.0.95",
+          "NSwag.Annotations": "13.18.2",
           "Npgsql": "7.0.2",
           "Npgsql.EntityFrameworkCore.PostgreSQL": "7.0.3",
           "Swashbuckle.AspNetCore": "6.5.0",
@@ -429,6 +431,11 @@
           }
         }
       },
+      "MicrosoftWebMvc/2.0.0": {
+        "dependencies": {
+          "Mvc2Futures": "2.0.50217"
+        }
+      },
       "Mono.TextTemplating/2.2.1": {
         "dependencies": {
           "System.CodeDom": "4.4.0"
@@ -437,6 +444,25 @@
           "lib/netstandard2.0/Mono.TextTemplating.dll": {
             "assemblyVersion": "2.2.0.0",
             "fileVersion": "2.2.1.1"
+          }
+        }
+      },
+      "Mvc2Futures/2.0.50217": {
+        "runtime": {
+          "lib/Microsoft.Web.Mvc.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "2.0.50217.0"
+          }
+        }
+      },
+      "MvcContrib/2.0.95": {
+        "dependencies": {
+          "MicrosoftWebMvc": "2.0.0"
+        },
+        "runtime": {
+          "lib/MvcContrib.dll": {
+            "assemblyVersion": "2.0.95.0",
+            "fileVersion": "2.0.95.0"
           }
         }
       },
@@ -462,6 +488,14 @@
           "lib/net7.0/Npgsql.EntityFrameworkCore.PostgreSQL.dll": {
             "assemblyVersion": "7.0.3.0",
             "fileVersion": "7.0.3.0"
+          }
+        }
+      },
+      "NSwag.Annotations/13.18.2": {
+        "runtime": {
+          "lib/netstandard2.0/NSwag.Annotations.dll": {
+            "assemblyVersion": "13.18.2.0",
+            "fileVersion": "13.18.2.0"
           }
         }
       },
@@ -1065,12 +1099,33 @@
       "path": "microsoft.win32.systemevents/5.0.0",
       "hashPath": "microsoft.win32.systemevents.5.0.0.nupkg.sha512"
     },
+    "MicrosoftWebMvc/2.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-WHtS0VfGs4f+YYUdd3fJVCrOPyR4xY8a4aGG4vfAXdRqyZ8pzatbwzbH4l+bdo7W5O50j/lO0Vt3relZJQQ8bw==",
+      "path": "microsoftwebmvc/2.0.0",
+      "hashPath": "microsoftwebmvc.2.0.0.nupkg.sha512"
+    },
     "Mono.TextTemplating/2.2.1": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-KZYeKBET/2Z0gY1WlTAK7+RHTl7GSbtvTLDXEZZojUdAPqpQNDL6tHv7VUpqfX5VEOh+uRGKaZXkuD253nEOBQ==",
       "path": "mono.texttemplating/2.2.1",
       "hashPath": "mono.texttemplating.2.2.1.nupkg.sha512"
+    },
+    "Mvc2Futures/2.0.50217": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-90ilYxgj4s82mfgVegs6NujfBw5zbR49SlIWW/vtjRXu6Trdi9W1xh/LlHu6or47IeBI2AhGKsqnfm7HFCBBlA==",
+      "path": "mvc2futures/2.0.50217",
+      "hashPath": "mvc2futures.2.0.50217.nupkg.sha512"
+    },
+    "MvcContrib/2.0.95": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-+vqMMmiGbn+rdFBGEo691A3aZr7OHUp3doXghpizilqbIYhZk49bnEI8hoZV4Apm/9tVx9epj1EbgCAK99W3+Q==",
+      "path": "mvccontrib/2.0.95",
+      "hashPath": "mvccontrib.2.0.95.nupkg.sha512"
     },
     "Npgsql/7.0.2": {
       "type": "package",
@@ -1085,6 +1140,13 @@
       "sha512": "sha512-3iVz7vcPAZt6iBSjJ8XyjtIP19jilNOJqTiTCs2UHWhpTyP+FbNhnzCBE/oyD3n49McmmenjKpva+yTy7q1z/g==",
       "path": "npgsql.entityframeworkcore.postgresql/7.0.3",
       "hashPath": "npgsql.entityframeworkcore.postgresql.7.0.3.nupkg.sha512"
+    },
+    "NSwag.Annotations/13.18.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-2zDLZXEU1PVuvdMc1k+SIkLonp8vPRHAkto6qQfCeCPqhDaF82+FOWe3TLJIYBS8IC7aV/mT+eoqJLeZvXiN4A==",
+      "path": "nswag.annotations/13.18.2",
+      "hashPath": "nswag.annotations.13.18.2.nupkg.sha512"
     },
     "Scrutor/3.3.0": {
       "type": "package",

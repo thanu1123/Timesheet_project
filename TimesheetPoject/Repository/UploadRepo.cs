@@ -16,22 +16,41 @@ namespace TimesheetPoject.Repository
             _context = con;
         }
 
-        public IActionResult add(UploadModel[] entries)
+        //public void add(UploadModel[] entries)
+        //{
+        //    DateTime now = DateTime.Now;
+        //    int daysInMonth = DateTime.DaysInMonth(now.Year, now.Month);
+
+        //    for (var i = 0; i <= daysInMonth; i++)
+        //    {
+        //        var model = new UploadModel();
+        //        model.total_hours = entries[i].total_hours;
+        //        model.Date = DateTime.Now.Date;
+        //        model.Day = entries[i].Day;
+        //        model.Status = entries[i].Status;
+        //        _context.TS_table.Add(model);               
+        //    }
+        //    _context.SaveChanges();
+
+        //}
+
+
+        public void add(UploadModel[] entries)
         {
             DateTime now = DateTime.Now;
-            int daysInMonth = DateTime.DaysInMonth(now.Year, now.Month);
+            var daysInMonth = DateTime.DaysInMonth(now.Year, now.Month);
 
-            for (var i = 0; i <= daysInMonth; i++)
+            foreach (var entry in entries)
             {
                 var model = new UploadModel();
-                model.total_hours = entries[i].total_hours;
+                model.total_hours = entry.total_hours;
                 model.Date = DateTime.Now.Date;
-                model.Day = entries[i].Day;
-                model.Status = entries[i].Status;
-                _context.TS_table.Add(model);               
+                model.Day = entry.Day;
+                model.Status = entry.Status;
+                _context.TS_table.Add(model);
             }
+
             _context.SaveChanges();
-            return Ok();
         }
         public IActionResult add1(EmployeeModel[] entries)
         {
